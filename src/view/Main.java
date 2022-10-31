@@ -1,5 +1,4 @@
 package view;
-import com.intellij.testFramework.TeamCityLogger;
 import data.Course;
 import data.Student;
 import data.Teacher;
