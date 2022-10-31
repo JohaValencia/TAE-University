@@ -1,6 +1,6 @@
 package data;
 
-public class Teacher {
+public abstract class Teacher {
     protected int teacherId;
    protected String teacherName;
     protected double baseSalary;
@@ -28,10 +28,4 @@ public class Teacher {
     }
 
 
-    @Override
-    public String toString() {
-        return "Teacher Id: " + this.teacherId +
-                " Teacher Name: " + this.teacherName +
-                " Base salary: $" + this.baseSalary;
-    }
 }

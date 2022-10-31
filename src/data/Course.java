@@ -25,7 +25,6 @@ public class Course {
         this.courseName = courseName;
         this.classroom = classroom;
         this.studentList = new ArrayList<>();
-        this.teacher = new Teacher();
     }
 
     /**
@@ -66,6 +65,11 @@ public class Course {
         return "Course Id: " + this.courseId + " Course: " + this.courseName + " Classroom: " + this.classroom;
     }
 
+    /**
+     * Methods to add students and teacher to a course
+     * @param student
+     * @return
+     */
     public  String addStudentAtCourse(Student student) {
         String addStudentToCourseList = " Student Id: " + student.getStudentId() + " Register to " + this.courseName + " Course";
 
@@ -81,6 +85,7 @@ public class Course {
         String addTeacherToCourseList = "Teacher Id: " + teacher.getTeacherId() + "Register to " + this.courseName + " Course";
         this.teacher = teacher;
     }
+
 
     public Teacher getTeacher() {
         return teacher;

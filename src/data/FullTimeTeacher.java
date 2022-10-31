@@ -1,13 +1,19 @@
 package data;
 
-public abstract class FullTimeTeacher extends Teacher {
+public class FullTimeTeacher extends Teacher {
     private  Integer yearsOfExperience;
 
     public FullTimeTeacher(){
 
     }
 
-    public FullTimeTeacher(int teacherId, String teacherName, double baseSalary){
+    /**
+     * Method to calculate the full time teacher salary
+     * @param teacherId
+     * @param teacherName
+     * @param baseSalary
+     */
+    public FullTimeTeacher(int teacherId, String teacherName, double baseSalary,int yearsOfExperience){
         super(teacherId, teacherName, baseSalary);
         this.yearsOfExperience = yearsOfExperience;
     }
