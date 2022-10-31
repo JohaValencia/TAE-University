@@ -1,2 +1,2 @@
 # TAE-University
-![](C:UML.png)
+![](./UML.png)
