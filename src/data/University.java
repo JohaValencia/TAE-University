@@ -1,4 +1,6 @@
 package data;
+import com.intellij.openapi.vcs.history.VcsRevisionNumber;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -7,6 +9,7 @@ public class University {
     private String name;
     private List<Course> courseList;
     private List<Teacher> teacherList;
+
     private List<Student> studentList;
     private List<University> memberList;
 
@@ -23,6 +26,10 @@ public class University {
         return name;
     }
 
+    /**
+     * Methods to order Course in a list, take its index and id
+     * @return
+     */
     public List<Course> getCourseList() {
         return courseList;
     }
@@ -41,9 +48,10 @@ public class University {
         return null;
     }
 
-    public List<Teacher> getTeacherList() {
-        return teacherList;
-    }
+    /**
+     * Methods to order Teacher in a list, take its index and id
+     * @return
+     */
 
     public Teacher getTeacherByIndex(int index) {
         return teacherList.get(index);
@@ -59,6 +67,10 @@ public class University {
         return null;
     }
 
+    /**
+     * Methods to order Student in a list, take its index and id
+     * @return
+     */
     public List<Student> getStudentList() {
         return studentList;
     }
@@ -78,7 +90,10 @@ public class University {
         return null;
     }
 
-
+    /**
+     * Methods to create new teacher, course and student and to add to each list
+     * @param university
+     */
     public void addMember(University university) {
         this.memberList.add(university);
     }
@@ -95,5 +110,7 @@ public class University {
         this.studentList.add(student);
     }
 
-
-        }
+    public List<Teacher> getTeacherList() {
+        return teacherList;
+    }
+}

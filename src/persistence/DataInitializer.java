@@ -1,8 +1,5 @@
 package persistence;
-import data.Course;
-import data.Student;
-import data.Teacher;
-import data.University;
+import data.*;
 
 public class DataInitializer {
     public static University loadUniversity() {
@@ -14,10 +11,10 @@ public class DataInitializer {
     }
 
     private static void loadTeachersIntoUniversity(University university) {
-        Teacher teacher1 = new Teacher(123, "Felipe Jímenez", 250000);
-        Teacher teacher2 = new Teacher(456, "Juan Castiblanco",250000);
-        Teacher teacher3 = new Teacher(789, "Lucho Bermudez", 250000);
-        Teacher teacher4= new Teacher(101, "Tito Puentes", 250000);
+        Teacher teacher1 = new FullTimeTeacher(123, "Felipe Jímenez", 250000, 5);
+        Teacher teacher2 = new FullTimeTeacher(456, "Juan Castiblanco",250000,3);
+        Teacher teacher3 = new PartTimeTeacher(789, "Lucho Bermudez", 250000, 18);
+        Teacher teacher4= new PartTimeTeacher(101, "Tito Puentes", 250000, 20);
         university.admittedTeacher(teacher1);
         university.admittedTeacher(teacher2);
         university.admittedTeacher(teacher3);
